@@ -1,0 +1,11 @@
+# is used for a single line comment
+'''
+is used for a multi line comment. also known as doc strings
+'''
+# Start with creating variables
+
+name = 'andrew'
+print(name)
+
+country = "nigeria"
+print(country)

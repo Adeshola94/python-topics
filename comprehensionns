@@ -1,0 +1,30 @@
+# List Comprehension
+
+old_list = [1, 2, 3, 4, 5]
+new_list = [garri * 10 for garri in old_list]
+print(new_list)
+
+dadslist = [5,15,25,35,45]
+momlist = [a +5 for a in dadslist]
+print(momlist)
+
+extended_list = [0, -3, -6, -8, -4, -2]
+old_list.append(extended_list)
+print(old_list)
+
+l3 = [0, -1, -2, 1, 2 ,3, 4]
+new_l3 = [i * 10 for i in l3 if i > 0]
+print(new_l3)
+
+print(old_list.index(4))
+
+#Dictionary Comprehension
+
+points = {
+    'Abel': 56, 
+    'Ben': 72, 
+    'Caleb': 61
+}
+
+new_test_score = {key:value + 10 for (key, value) in points.items()} 
+print(new_test_score)

@@ -1,0 +1,161 @@
+import math, random
+''' Datatype is an objects collection also known as object type'''
+
+#1 String Data-type
+
+country = 'Nigeria'
+print('I' + 'live' + 'in' + country)
+print('I ' + 'live ' + 'in '  + country)
+print('I' + '  ' + 'live' +' '+ 'in'  + ' ' + country)
+print(f'{country} is in Africa')
+
+country = "India"
+print(country)
+print(f'{country} is in Asia')
+print(country, 'is in Asia')
+
+country1 = 'Nigeria'
+country2 = 'India'
+print(f'{country1} is the most populated in Africa. {country2} is the second populated in Asia')
+print(country1, 'is the most populated in Africa.', country2, 'is the second populated in Asia.' )
+
+
+#2 Numeric Data-type
+'''
+Integers
+Floating point
+Complex numbers
+'''
+#swapping algorithm
+a = 4
+b = 5
+a, b = b, a
+print(a)
+print(b)
+
+
+a = 50
+b = 50
+c = 50
+result = a + b + c
+print(result // 5)
+
+ade = 5
+seun = 30
+ans = (ade * seun) 
+res = (ade * seun) + 10
+print(res)
+print(ans + 10)
+
+c = 9.9999999999
+d = 9.9999999999
+print(f'{c+d}')
+
+pi = 3.14159265359
+print (format(pi, ".3g")) #3 significant digit
+print(repr(math.pi))
+print(math.sqrt(100))
+
+
+word = 'decagon'
+print(word.replace ('decagon', 'polygon'))
+
+tation = 'implementation'
+print(tation[5:])
+
+fruit = 'pineapple'
+print(list(fruit))
+
+
+multilist = [['ade', 'bola'], ['timi', 'folake', 'john'], ['jimi', 'jegede', 'timperi']]
+print(multilist[2][2].capitalize() +' is a boy')
+print(multilist[1][2].capitalize() + ' is a pastor')
+
+
+
+#3 '''Dictionary Data-Type'''
+
+#Dictionary uses a key value pairing
+#Dictionary is mutable
+
+dict = {
+    'A' : 'America',
+    'B' :  'Britain',
+    'C' : 'Canada',
+}
+print(dict)
+print(dict['A'])
+print(dict['B'] + ' is in Europe')
+dict['U'] = 'Ukraine'
+dict['R'] = 'Russia'
+print(dict)
+dict.pop('U')
+print(dict)
+
+
+
+
+#4 Tuples Data Type
+'''
+Tuples are like list, except they are ummutable and they are represented with ()
+
+Tuples can have multiple data structures
+
+'''
+tuples = (18, "True", 'Bola', 18)
+print(tuples[::-1]) #revers the tuple
+print(tuples[-1]) #get last element
+print(tuples.count(18))
+
+
+
+
+#5 Boolean Data-Type
+
+s = True
+y = False
+z = True
+
+'''Logical Operator are and, not, or'''
+print(s and y) #false
+print(s or y) #true
+print(s and z) #true
+print(s and y or z) #true
+'''and has a higher precendece before or then not'''
+print(not y or s) #true
+#join OR with NOT gives an error
+
+
+
+#Set data-type
+'''Set in python is an uordered collection of unique and immutable collection.
+    Only unique item will be printed out
+'''
+
+set_1 = {'PJ', 'Reverse Engineer', 'Backend Software Engineer', 'Norway' }
+set_2 = {'Palo Alto', 'Bread'}
+set_3 = set_1 | set_2 #set_3 is an addition of set_1 and set_2
+
+set_1.add('Beans')
+set_2.add('Norway')
+set_3.add('Django')
+print(set_1)
+print(set_2)
+print(set_3)
+
+
+'''Intersection => Means what is common i both sets '''
+print('commo element in set1 and set2 is :', set_1.intersection(set_2))
+
+'''symmetric difference => means what is in either set but not in both set'''
+print('symmetric difference between set 1 and 2', set_1.symmetric_difference(set_2))
+
+'''Differeces => Means what is in set (a) thats not in set (b)'''
+print('Difference between set 1 and set 2:', set_1.difference(set_2))
+print('Difference between set 1 and set 3:', set_1.difference(set_3))
+
+set_random = {'k', 'I', 'L', 'O',}
+set_random.add('Kilo')
+set_random.add('Kilometter')
+set_random.discard('Kilometter')  #DISCARD is used to delete values
+print(set_random)

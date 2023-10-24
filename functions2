@@ -1,0 +1,75 @@
+from functools import reduce
+
+def test(a: int, b: int):
+    return a * b
+print(test(2, 4))
+
+def multiargs(*beans):
+    sum = 0
+    for i in beans:
+        sum += i
+    return sum
+print(multiargs(1,2,3,4,5, 6, 7, 8, 9, 10))
+
+
+def timesargs(*args):
+    sum = 1
+    for i in args:
+        sum *= i
+    return sum
+print(timesargs(1,2,3,4,5, 6, 19))
+
+def minusarg(*args):
+    result = 10
+    for i in args:
+        result -= i
+    return result
+print(minusarg(11,3,2)) # 5
+
+
+def next5(num):
+    return num+1, num+2, num+3, num+4, num+5
+
+print('Next 5 numbers after 5 is ', next5(50))
+i1, i2, i3, i4, i5 = next5(50)
+print('Next 5 numbers after 5 is ', i1, i2, i3, i4, i5)
+
+#Lambda function is an anonymous function
+# var = lambda parameter: return
+times_2 = lambda x: x * 2
+print(times_2(10)) # 20
+
+add_5 = lambda y: y+10
+print(add_5(5)) #15
+
+def anything(num):
+    return lambda x : x * num
+print(anything(4)(4))
+
+
+def something(pap):
+    return lambda p : p + pap
+print(something(5)(45))
+
+# Create a times table with python 
+
+oneToTen = range(1,13)
+#print(oneToTen)
+mult_by_2 = lambda x: x * 2
+print(list(map(mult_by_2, oneToTen)))
+
+# Filters with lambda 
+#print out only even numbers from a range of 1, inf
+print(list(filter((lambda x: x % 2 == 0), range(1,101))))
+
+print(list(filter((lambda y: y % 3 == 0), range(1,50))))
+
+threetimes = range(1,13)
+multitumes = lambda y: y * 3
+print(list(map(multitumes,threetimes)))
+
+
+print(reduce((lambda num, nextNum: num + nextNum), range(1,11)))
+# 1 2 3 4 5 6 7 8 9 10
+
+print(reduce((lambda a, b: a + b), range(1,101)))
